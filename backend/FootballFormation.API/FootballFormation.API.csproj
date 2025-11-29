@@ -17,4 +17,8 @@
     <PackageReference Include="PuppeteerSharp" Version="20.2.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\FootballFormation.ServiceDefaults\FootballFormation.ServiceDefaults.csproj" />
+  </ItemGroup>
+
 </Project>
