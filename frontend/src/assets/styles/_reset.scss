@@ -1,0 +1,81 @@
+/* Box-sizing: border-boxを全体に適用 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ブラウザのデフォルトマージンをリセット */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* リンクのデフォルト装飾をリセット */
+a {
+  text-decoration: none;
+  color: inherit; /* 親要素の色を継承する場合 */
+}
+
+/* リストのデフォルト装飾をリセット (クラスを持つul, olのみに適用する例も多い) */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* 画像関連の調整 */
+img,
+picture {
+  max-width: 100%; /* レスポンシブ対応 */
+  display: block;  /* インライン要素特有の余白をなくす */
+}
+
+/* フォーム要素のフォント継承 */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* bodyのコア設定 */
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.5; /* ベースとなる行の高さを設定 */
+  -webkit-font-smoothing: antialiased; /* フォントの表示を滑らかに */
+}
+
+/* 見出しなど、行間を短くしたい要素の設定 */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* アニメーション、トランジション、スクロール動作を、ユーザー設定に応じて無効化 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
